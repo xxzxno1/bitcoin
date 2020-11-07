@@ -1,39 +1,40 @@
-比特币核心集成/分级树
+Bitcoin Core integration/staging tree
 https://bitcoincore.org
 
-什么是比特币？
-比特币是一种实验性数字货币，可以即时支付给世界任何地方的任何人。比特币使用对等技术在没有中央授权的情况下进行操作：管理交易和发行资金是由网络集体进行的。比特币核心（Bitcoin Core）是可以使用这种货币的开源软件的名称。
+What is Bitcoin?
+Bitcoin is an experimental digital currency that enables instant payments to anyone, anywhere in the world. Bitcoin uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried out collectively by the network. Bitcoin Core is the name of open source software which enables the use of this currency.
 
-有关更多信息以及比特币核心软件的立即可用的二进制版本，请参阅https://bitcoincore.org/en/download/或阅读 原始白皮书。
+For more information, as well as an immediately usable, binary version of the Bitcoin Core software, see https://bitcoincore.org/en/download/, or read the original whitepaper.
 
-执照
-比特币核心是根据麻省理工学院许可条款发布的。有关更多信息，请参见COPYING或参见https://opensource.org/licenses/MIT。
+License
+Bitcoin Core is released under the terms of the MIT license. See COPYING for more information or see https://opensource.org/licenses/MIT.
 
-开发过程
-该master分支定期构建（请参阅doc/build-*.md说明）并经过测试，但不能保证它是完全稳定的。标记会从发行分支定期创建，以指示新的官方稳定发行版Bitcoin Core。
+Development Process
+The master branch is regularly built (see doc/build-*.md for instructions) and tested, but it is not guaranteed to be completely stable. Tags are created regularly from release branches to indicate new official, stable release versions of Bitcoin Core.
 
-该https://github.com/bitcoin-core/gui库专门用于图形用户界面的开发。在所有单树存储库中，其主分支都是相同的。发布分支和标签不存在，因此除非出于开发原因，否则请不要分叉该存储库。
+The https://github.com/bitcoin-core/gui repository is used exclusively for the development of the GUI. Its master branch is identical in all monotree repositories. Release branches and tags do not exist, so please do not fork that repository unless it is for development reasons.
 
-贡献工作流在CONTRIBUTING.md中进行了描述， 对开发人员的有用提示可以在doc / developer-notes.md中找到。
+The contribution workflow is described in CONTRIBUTING.md and useful hints for developers can be found in doc/developer-notes.md.
 
-测验
-测试和代码审查是开发的瓶颈；我们收到的拉取请求超出了我们可以在短时间内审查和测试的请求。请耐心等待，并通过测试其他人的请求来提供帮助，并记住这是一个对安全性至关重要的项目，其中任何错误都可能使人们付出很多金钱。
+Testing
+Testing and code review is the bottleneck for development; we get more pull requests than we can review and test on short notice. Please be patient and help out by testing other people's pull requests, and remember this is a security-critical project where any mistake might cost people lots of money.
 
-自动化测试
-强烈鼓励开发人员为新代码编写单元测试，并为旧代码提交新的单元测试。可以使用以下命令编译和运行单元测试（假设未在configure中禁用它们）make check。有关运行和扩展单元测试的更多详细信息，可以在/src/test/README.md中找到。
+Automated Testing
+Developers are strongly encouraged to write unit tests for new code, and to submit new unit tests for old code. Unit tests can be compiled and run (assuming they weren't disabled in configure) with: make check. Further details on running and extending unit tests can be found in /src/test/README.md.
 
-还有一些用Python编写的回归和集成测试，这些测试会在构建服务器上自动运行。可以使用以下命令运行这些测试（如果已安装测试依赖项）：test/functional/test_runner.py
+There are also regression and integration tests, written in Python, that are run automatically on the build server. These tests can be run (if the test dependencies are installed) with: test/functional/test_runner.py
 
-Travis CI系统可确保针对Windows，Linux和macOS生成每个拉取请求，并确保自动运行单元/健全性测试。
+The Travis CI system makes sure that every pull request is built for Windows, Linux, and macOS, and that unit/sanity tests are run automatically.
 
-手动质量保证（QA）测试
-更改应由编写代码的开发人员以外的其他人员测试。这对于较大或高风险的更改尤其重要。如果测试更改不是很简单，则将测试计划添加到拉取请求描述中很有用。
+Manual Quality Assurance (QA) Testing
+Changes should be tested by somebody other than the developer who wrote the code. This is especially important for large or high-risk changes. It is useful to add a test plan to the pull request description if testing the changes is not straightforward.
 
-翻译
-可以将翻译更改和新翻译提交到 Bitcoin Core的Transifex页面。
+Translations
+Changes to translations as well as new translations can be submitted to Bitcoin Core's Transifex page.
 
-定期从Transifex中提取翻译，并将其合并到git存储库中。有关其工作原理的详细信息，请参见 翻译过程。
+Translations are periodically pulled from Transifex and merged into the git repository. See the translation process for details on how this works.
 
-重要提示：我们不接受翻译更改作为GitHub拉取请求，因为Transifex的下一次拉取将再次自动覆盖它们。
+Important: We do not accept translation changes as GitHub pull requests because the next pull from Transifex would automatically overwrite them again.
 
-翻译人员还应订阅邮件列表。
+Translators should also subscribe to the mailing list.
+
